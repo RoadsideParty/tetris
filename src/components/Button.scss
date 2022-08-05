@@ -1,0 +1,42 @@
+.button {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border: 12px solid black;
+    cursor: pointer;
+}
+
+.button.space {
+    border: none;
+    width: 100px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.button.left {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.button.right {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.button.up {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+}
+
+.button.down {
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}

@@ -1,0 +1,51 @@
+.board {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(20, 30px);
+    gap: 1px;
+    border: 1px solid black;
+    padding: 1px;
+
+
+}
+
+.operate-box {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .operate-right {
+        width: 72px;
+        height: 72px;
+        position: relative;
+
+        .button {
+            position: absolute;
+        }
+
+        .up {
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+
+        .left {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .right {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .down {
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
+    }
+}

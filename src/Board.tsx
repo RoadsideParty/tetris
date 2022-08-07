@@ -19,7 +19,7 @@ function Board() {
         shape: [[4, 14, 24, 25]]
       }
     ]
-    const randomIndex = Math.round(Math.random() * allSquaresList.length)
+    const randomIndex = Math.round(Math.random() * (allSquaresList.length - 1))
     return allSquaresList[randomIndex].shape[0]
   }
   const squaresRef = useRef(getRandmoSquares())

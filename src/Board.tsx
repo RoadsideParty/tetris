@@ -1,21 +1,30 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './Board.scss'
 import Button from './components/Button'
 import Square from './components/Square'
 function Board() {
-  // 生成图形
-  const [squares, setSquares] = useState<number[]>([11, 12, 21, 22])
   // 渲染棋盘
+  const [allSquares, setAllSquares] = useState(new Array(20).fill(new Array(10).fill('')))
   function renderBoard(): JSX.Element[] {
-    return new Array(200).fill(null).map((item, index) => {
-      for (const _item of squares) {
-        if (_item === index) {
-          return <Square squares={squares} setSquares={setSquares} active={true} key={index} index={index} />
-        }
-      }
-      return <Square squares={squares} setSquares={setSquares} active={false} key={index} index={index} />
+    return allSquares.map((item, index) => {
+      return (
+        <div className='line' key={index}>
+          {
+            item.map((_item: string, _index: number) => {
+              return <Square key={_index}>{_index}</Square>
+            })
+          }
+        </div>
+      )
     })
   }
+  // 生成图形
+  function createShape() {
+    
+  }
+  useEffect(() => {
+    console.log(1);
+  }, [])
   return (
     <>
       <div className="board">
